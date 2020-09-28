@@ -1,15 +1,14 @@
 import React from 'react';
 import {api} from '../utils/api';
 import Card from './Card';
+import userAvatarDefault from '../images/profile-img.jpg';
 
 
 function Main(props) {
-  const [userName, setUserName] = React.useState();
-  const [userDescription, setUserDescription] = React.useState();
-  const [userAvatar, setUserAvatar] = React.useState();
+  const [userName, setUserName] = React.useState('Жак-Ив Кусто');
+  const [userDescription, setUserDescription] = React.useState('Исследователь океана');
+  const [userAvatar, setUserAvatar] = React.useState(userAvatarDefault);
   const [cards, setCards] = React.useState([]);
-
-
 
   React.useEffect(() => {
 
